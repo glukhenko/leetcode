@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+    "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
+    width="400px" height="400px">
+
+<circle cx="200" cy="100" r="50" stroke="white"
+style="fill: blue; stroke: cadetblue; stroke-width: 1;"/>
+<text x="170" y="110" text-anchor="left"
+font-family="sans-serif" font-size="30">124</text>
+
+<circle cx="300" cy="200" r="50" stroke="white"
+style="fill: blue; stroke: cadetblue; stroke-width: 1;"/>
+<text x="290" y="210" text-anchor="left"
+font-family="sans-serif" font-size="30">4</text>
+
+<circle cx="100" cy="200" r="50" stroke="white"
+style="fill: blue; stroke: cadetblue; stroke-width: 1;"/>
+<text x="80" y="210" text-anchor="left"
+font-family="sans-serif" font-size="30">17</text>
+
+<line x1="240" y1="140" x2="300" y2="200" stroke="black" />
+
+</svg>
