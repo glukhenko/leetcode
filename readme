@@ -1,0 +1,13 @@
+Repository store solutions leetcode tasks
+
+Format name directory of solution: task%number_task% %type_task% [%level_task%]
+
+number_task - number of task
+
+type_task:
+dp - dynamic programming
+
+level_task:
+e - easy
+m - medium
+h - hard
