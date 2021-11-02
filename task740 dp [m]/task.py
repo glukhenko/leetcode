@@ -1,4 +1,4 @@
-# https://leetcode.com/problems/house-robber-ii/
+# https://leetcode.com/problems/delete-and-earn/
 
 from typing import List
 
