@@ -6,6 +6,7 @@ number_task - number of task
 
 type_task:
 dp - dynamic programming
+a - algorithm
 
 level_task:
 e - easy
