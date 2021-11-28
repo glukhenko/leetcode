@@ -4,9 +4,20 @@ from helpers.base_tree import Node, BaseTree
 class Tree(BaseTree):
     def __init__(self):
         super(Tree, self).__init__()
+        self.visited = set()
 
-    def deppestLeavesSum(self, node):
+    def dfs(self, node):
+        if node in self.visited:
+            return
+        self.visited.add(node)
 
+        if node.l is not None:
+            self.dfs(node.l)
+        if node.r is not None:
+            self.dfs(node.r)
+
+    def dippestLeavesSum(self, node):
+        """Breadth-first search, на примере подсчета суммы последнего уровня"""
         queue = [node]
         next_queue = []
         result = 0

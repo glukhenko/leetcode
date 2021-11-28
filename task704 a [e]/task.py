@@ -3,26 +3,27 @@
 from typing import List
 
 
-class Solution:
+# The isBadVersion API is already defined for you.
+# @param version, an integer
+# @return an integer
+# def isBadVersion(version):
 
-    def search(self, nums: List[int], target: int) -> int:
+def isBadVersion(v):
+    pass
+
+class Solution:
+    def firstBadVersion(self, n):
         """O(log n)"""
         left = -1
-        right = len(nums)
+        right = n
         while right > left + 1:
-            middle = (left + right) // 2
-            if nums[middle] > target:
-                right = middle
+            version = (left + right) // 2
+            if isBadVersion(version):
+                right = version
             else:
-                left = middle
-        if left >= 0 and nums[left] == target:
-            return left
-        else:
-            return -1
+                left = version
 
-    def search2(self, nums: List[int], target: int) -> int:
-        """O(n)"""
-        return nums.index(target) if target in nums else -1
+        return right
 
 
 if __name__ == '__main__':
