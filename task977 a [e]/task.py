@@ -1,4 +1,4 @@
-# https://leetcode.com/problems/search-insert-position/
+# https://leetcode.com/problems/squares-of-a-sorted-array/
 
 from typing import List
 
