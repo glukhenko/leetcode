@@ -1,30 +1,13 @@
-# https://leetcode.com/problems/middle-of-the-linked-list/submissions/
+# https://leetcode.com/problems/reverse-words-in-a-string-iii/
 
 
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
 class Solution:
-    def middleNode(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        """
-        Суть решения:
-        Создаем 2 указателя: медленный (1 шаг) и быстрый (2 шага)
-        И как закончатся шаги у быстрого, значит медленный будет указывать на середину
-
-        """
-        fast = head
-        slow = head
-
-        while fast.next:
-            if not fast.next.next:
-                return slow.next
-            slow = slow.next
-            fast = fast.next.next
-
-        return slow
+    def reverseWords(self, s: str) -> str:
+        return ' '.join(word[::-1] for word in s.split(' '))
 
 
 if __name__ == '__main__':
-    pass
+    s = "Let's take LeetCode contest"
+    expected = "s'teL ekat edoCteeL tsetnoc"
+    result = Solution().reverseWords(s)
+    print(f'result: {result}')
