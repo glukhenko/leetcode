@@ -5,19 +5,15 @@ from typing import List
 
 class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
+        # значение в 0 индексе массива считаем сразу уникальным
+        i_uniq_value = 1
 
-        slow, fast = 0, 1
-        last_index = len(nums) - 1
+        for i in range(len(nums)-1):
+            if nums[i] != nums[i+1]:
+                nums[i_uniq_value] = nums[i+1]
+                i_uniq_value += 1
 
-        while fast <= last_index:
-            if nums[slow] == nums[fast]:
-                fast += 1
-            else:
-                nums[slow + 1] = nums[fast]
-                slow += 1
-                fast += 1
-
-        return slow + 1
+        return i_uniq_value
 
 
 if __name__ == '__main__':
