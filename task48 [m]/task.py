@@ -24,16 +24,15 @@ class Solution:
         count_iter = to_position.y - from_position.y
         for y in range(count_iter):
             a, b, c, d = (
-                Point(from_position.x,      from_position.y + y),
-                Point(from_position.x + y,  to_position.y),
-                Point(to_position.x,        to_position.y - y),
-                Point(to_position.x - y,    from_position.x),
+                Point(from_position.x, from_position.y + y),
+                Point(from_position.x + y, to_position.y),
+                Point(to_position.x, to_position.y - y),
+                Point(to_position.x - y, from_position.x),
             )
             self.__set_values(
                 points=[b, c, d, a],
                 values=self.__get_values([a, b, c, d])
             )
-
 
     def rotate(self, matrix: List[List[int]]) -> None:
         """
@@ -50,7 +49,6 @@ class Solution:
             end_layer = Point(end_layer.x - 1, end_layer.y - 1)
 
         return self.matrix
-
 
 
 if __name__ == '__main__':
