@@ -30,7 +30,6 @@ class Solution:
         return self.merge_two_list(l, r)
 
     def merge_two_list(self, l: ListNode, r: ListNode):
-        temp = f'merge_two_list({l}, {r})'
         result = current = ListNode()
 
         while all((l, r)):
@@ -43,7 +42,6 @@ class Solution:
             current = current.next
         current.next = l or r
         result = result.next
-        print(f'{temp} => {result}')
         return result
 
 
