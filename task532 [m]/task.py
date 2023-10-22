@@ -14,7 +14,7 @@ class Solution:
         if k == 0:
             count_pairs = sum([1 for val_count in counter.values() if val_count > 1])
         else:
-            count_pairs = sum([1 for num in counter.keys() if num + k in counter or num - k in counter])
+            count_pairs = sum([1 for num in counter.keys() if num + k in counter])
 
         return count_pairs
 
