@@ -16,6 +16,7 @@ class Solution:
                 return True
             store.add(prev_module)
             prev_module = module
+        return False
 
 
 if __name__ == '__main__':
