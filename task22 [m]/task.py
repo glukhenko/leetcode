@@ -4,7 +4,27 @@ from typing import List
 
 
 class Solution:
+
     def generateParenthesis(self, n: int) -> List[str]:
+        """
+        Суть решения:
+        Добавляем в каждую позицию скобочной последовательности по ()
+        """
+        if n == 1:
+            return ["()"]
+
+        all_braces = {"()"}
+        for _ in range(n - 1):
+
+            n_braces = set()
+            for braces in all_braces:
+                for i in range(len(braces)):
+                    n_braces.add(braces[:i] + "()" + braces[i:])
+            all_braces = n_braces
+
+        return list(all_braces)
+
+    def generateParenthesis2(self, n: int) -> List[str]:
         """
         Суть решения:
         Через рекурсионный DFS мы последовательно добавляем скобки слева потом скобки справа
