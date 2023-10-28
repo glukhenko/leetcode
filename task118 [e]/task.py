@@ -1,4 +1,4 @@
-# https://leetcode.com/problems/path-sum
+# https://leetcode.com/problems/pascals-triangle/
 
 from typing import List, Optional
 
